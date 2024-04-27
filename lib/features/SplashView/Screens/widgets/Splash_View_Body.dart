@@ -1,3 +1,4 @@
+import 'package:bookly_app_mvvm/features/SplashView/Screens/widgets/Sliding_Text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -18,15 +19,19 @@ class _splashViewBodyState extends State<splashViewBody>
   void initState() {
     super.initState();
     animationController =
-        AnimationController(vsync: this, duration: 
-        Duration(seconds: 2));
+        AnimationController(vsync: this, duration: Duration(seconds: 2));
     slidingAnimation =
-        Tween<Offset>(begin: const Offset(0, 7), end: Offset.zero)
+        Tween<Offset>(begin: const Offset(0, 5), end: Offset.zero)
             .animate(animationController);
     animationController.forward();
-    slidingAnimation.addListener(() {
+    /* slidingAnimation.addListener(() {
       setState(() {});
-    });
+    });*/
+  }
+
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
   }
 
   @override
@@ -37,11 +42,7 @@ class _splashViewBodyState extends State<splashViewBody>
       children: [
         Image.asset('assets/images/Logo.png'),
         const SizedBox(height: 4),
-        SlideTransition(
-            position: slidingAnimation,
-            child: const Text('Read Free Books'
-            ,style: TextStyle(fontSize: 16)
-            , textAlign: TextAlign.center))
+        Sliding_Text(slidingAnimation: slidingAnimation)
       ],
     );
   }
