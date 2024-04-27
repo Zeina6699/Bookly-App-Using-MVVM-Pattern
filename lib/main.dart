@@ -1,6 +1,6 @@
 import 'package:bookly_app_mvvm/Constants.dart';
-import 'package:bookly_app_mvvm/features/SplashView/Screens/Splash_View.dart';
-import 'package:bookly_app_mvvm/features/SplashView/Screens/widgets/Splash_View_Body.dart';
+import 'package:bookly_app_mvvm/features/SplashView/views/Splash_View.dart';
+import 'package:bookly_app_mvvm/features/SplashView/views/widgets/Splash_View_Body.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 void main() {
@@ -18,7 +18,7 @@ class BooklyApp extends StatelessWidget {
         scaffoldBackgroundColor:kPrimaryColor
      
       )
-     , home:const Scaffold(body: SplashView())
+     , home:const SplashView()
     );
   }
 }
