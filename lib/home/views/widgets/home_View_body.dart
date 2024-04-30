@@ -1,6 +1,8 @@
 import 'package:bookly_app_mvvm/home/views/widgets/Custom_AppBar.dart';
+import 'package:bookly_app_mvvm/home/views/widgets/Custom_List_View.dart';
 import 'package:bookly_app_mvvm/home/views/widgets/Custom_List_View_Item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class homeViewBody extends StatelessWidget {
@@ -11,7 +13,10 @@ class homeViewBody extends StatelessWidget {
     return const Column(
       children: [
         customAppBar(),
-        customListViewItem()
+       //R customListViewItem(),
+        SizedBox(
+          height: 350,
+          child: featuredBookListView())
       ],
     );
   }
