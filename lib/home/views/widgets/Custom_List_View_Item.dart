@@ -5,14 +5,16 @@ class customListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 2/4,
+    return  AspectRatio(
+      
+      aspectRatio:2/4,
       child: Container(
-       
+        
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         image: const DecorationImage(
-          image:AssetImage('assets/images/t.png'))
+          image:AssetImage('assets/images/t.png',  
+         ),)
       ),
       
       ),

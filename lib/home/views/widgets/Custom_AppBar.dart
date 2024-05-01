@@ -11,6 +11,7 @@ class customAppBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left:15,right:15 ,top:50,bottom:1),
       child: Row(
+        
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Image.asset('assets/images/Logo.png', height: 23),

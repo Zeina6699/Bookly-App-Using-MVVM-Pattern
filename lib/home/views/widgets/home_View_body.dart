@@ -1,3 +1,4 @@
+import 'package:bookly_app_mvvm/core/styles.dart';
 import 'package:bookly_app_mvvm/home/views/widgets/Custom_AppBar.dart';
 import 'package:bookly_app_mvvm/home/views/widgets/Custom_List_View.dart';
 import 'package:bookly_app_mvvm/home/views/widgets/Custom_List_View_Item.dart';
@@ -11,12 +12,15 @@ class homeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         customAppBar(),
        //R customListViewItem(),
         SizedBox(
-          height: 350,
+          height: 400,
           child: featuredBookListView())
+         , Text("Best Seller",style: styles.titleMedieum)
+          
       ],
     );
   }
