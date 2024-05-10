@@ -15,18 +15,21 @@ class homeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return 
       SingleChildScrollView(
-        child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-               const customAppBar(),
-               //R customListViewItem(),
-               const SizedBox(
-          height: 400,
-          child: featuredBookListView())
-         , Text("Best Seller",style: 
-         styles.textStyle18.copyWith(fontFamily:KGsectraFine )
-         ), const BestSellerListView() 
-              ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal:30 ),
+          child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                 const customAppBar(),
+                 //R customListViewItem(),
+                 const SizedBox(
+            height: 400,
+            child: featuredBookListView())
+           , Text("Best Seller",style: 
+           styles.textStyle18.copyWith(fontFamily:KGsectraFine )
+           ), const BestSellerListView() 
+                ],
+          ),
         )  );
   }
 }

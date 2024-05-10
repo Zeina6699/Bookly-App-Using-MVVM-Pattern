@@ -28,7 +28,7 @@ class BestSellerListView extends StatelessWidget {
          Padding(
            padding: const EdgeInsets.only(top:40),
            child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
                   width: MediaQuery.of(context).size.width*.5,
